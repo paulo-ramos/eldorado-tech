@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ptBR">
+  <head>
+    <!--semana 1-->
+    <!--exemplo baixado do site bootstrap. fonte: https://getbootstrap.com/docs/4.6/examples/-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Semana 1 - Eldorado Teck</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/dashboard/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="bootstrap-4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Semana 1 - Eldorado Tech</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" >Bem vindo.</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="sidebar-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <span data-feather="home"></span>
+              Dashboard <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cadastro">
+              <span data-feather="file"></span>
+              Alunos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="shopping-cart"></span>
+              Products
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="users"></span>
+              Customers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="bar-chart-2"></span>
+              Reports
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              Integrations
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Eldorado Tech</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          
+        </div>
+      </div>
+
+      <h2>Alunos</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nome</th>
+              <th>Cidade</th>
+              <th>Estado</th>
+              <th>Telefone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1,001</td>
+              <td>Paulo Henrique</td>
+              <td>Piracicaba</td>
+              <td>SP</td>
+              <td>(19)91234-5678</td>
+            </tr>
+            <tr>
+              <td>1,002</td>
+              <td>Gabriel</td>
+              <td>Rio de janeiro</td>
+              <td>RJ</td>
+              <td>(21)91234-5678</td>
+            </tr>
+            <tr>
+              <td>1,003</td>
+              <td>Eudes</td>
+              <td>Belo Horizonte</td>
+              <td>MG</td>
+              <td>(31)91234-5678</td>
+            </tr>
+            <tr>
+              <td>1,003</td>
+              <td>Alessandro</td>
+              <td>Cuiabá</td>
+              <td>MT</td>
+              <td>(63)91234-5678</td>
+            </tr>
+            <tr>
+              <td>1,004</td>
+              <td>Iraze</td>
+              <td>Campo Grande</td>
+              <td>MS</td>
+              <td>(63)91234-5678</td>
+            </tr>
+            <tr>
+              <td>1,005</td>
+              <td>Jean</td>
+              <td>Rio Branco</td>
+              <td>AC</td>
+              <td>(72)91234-5678</td>
+            </tr>
+            <tr>
+              <td>1,006</td>
+              <td>Dayana</td>
+              <td>Manaus</td>
+              <td>AM</td>
+              <td>(92)91234-5678</td>
+            </tr>
+            <tr>
+              <td>1,007</td>
+              <td>...</td>
+              <td>...</td>
+              <td>...</td>
+              <td>...</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
+
+
+      
+      <a name="cadastro"><h2>Formulário de Cadastro de Alunos</h2> </a>
+      <div class="table-responsive">
+        <form>
+          <div class="form-group">
+            <label for="nome">Nome do aluno</label>
+            <input class="form-control" type="text" placeholder="Entre com o nome do anuno" id="nome" name="nome">
+          </div>
+          <div class="form-group">
+            <label for="nome">Cidade</label>
+            <input class="form-control" type="text" placeholder="Cidade onde vive" id="cidade" name="cidade">
+          </div>
+          <div class="form-group">
+            <label for="nome">Estado</label>
+            <input class="form-control" type="text" placeholder="(UF) Informe o estado" id="estado" name="estado">
+          </div>
+          <div class="form-group">
+            <label for="nome">Celular</label>
+            <input class="form-control" type="text" placeholder="Informe o telefone no formato (xx)xxxxx-xxxx" id="celular" name="celular">
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        
+      </div>
+
+
+
+    </main>
+    
+
+
+
+
+
+
+  </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+        <script src="dashboard.js"></script>
+  </body>
+</html>
