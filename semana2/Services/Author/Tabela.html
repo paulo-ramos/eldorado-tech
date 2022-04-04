@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <script src="../../Domain/Author.js"></script>
+    <script src="../../Repository/AuthorRepository.js"></script>
+
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Semana 2 - Eldorado Tech - Tabela</title>
+</head>
+  <body>
+    <h1>Autores</h1>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Imagem</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Nascimento</th>
+            <th scope="col">Gênero</th>
+            <th scope="col">Id</th>
+          </tr>
+        </thead>
+        <tbody id="conteudo-tabela"></tbody>
+      </table>
+  
+      <script>
+        const conteudoTabela = document.getElementById('conteudo-tabela')
+  
+        const repository = new AuthorRepository()
+        const authors = repository.GetAll()
+  
+        for (const author of authors) {
+          const linha = document.createElement('tr')
+  
+          const colunaImagem = document.createElement('td')
+          colunaImagem.innerHTML = author.getImage()
+          linha.appendChild(colunaImagem)
+
+          const colunaNome = document.createElement('td')
+          colunaNome.innerHTML = author.getName()
+          linha.appendChild(colunaNome)
+  
+          const colunaIdade = document.createElement('td')
+          colunaIdade.innerHTML = author.getYearOfBirth()
+          linha.appendChild(colunaIdade)
+  
+          const colunaGenero = document.createElement('td')
+          colunaGenero.innerHTML = author.getGenre()
+          linha.appendChild(colunaGenero)    
+  
+          const colunaId = document.createElement('td')
+          colunaId.innerHTML = author.getId()
+          linha.appendChild(colunaId)
+          
+
+          // const colunaAcao = document.createElement('td')
+
+          // const link = document.createElement('a');
+          // link.setAttribute("href","www.google.com");
+          // colunaAcao.innerHTML = link
+          // linha.appendChild(colunaAcao);
+
+          // linha.appendChild(colunaAcao)  
+  
+          conteudoTabela.appendChild(linha)
+        }
+      </script>
+
+
+
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

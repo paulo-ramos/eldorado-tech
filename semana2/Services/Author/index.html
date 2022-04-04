@@ -1,15 +1,92 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <script src="../../Domain/Author.js"></script>
-        <script src="../../Repository/AuthorRepository.js"></script>
-        <script>
-            const author1 = new Author("10", "Paulo Coelho", "76", "Masculino")
-          
-            console.log(author1.getName());
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <script src="../../Domain/Guid.js"></script>
+    <script src="../../Domain/Author.js"></script>
+    <script src="../../Repository/AuthorRepository.js"></script>
 
-        </script>
-    </body>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Semana 2 - Eldorado Tech</title>
+  </head>
+  <body>
+    <h1>Autores</h1>
+    <script>
+        let author2  = new Author(NewGuid(), 'Monteito Lobato', '1882', 'Masculino','escritoresbrasileiros_21')
+        let author3  = new Author(NewGuid(), 'José de Alencar', '1829', 'Masculino','escritoresbrasileiros_82')
+        let author4  = new Author(NewGuid(), 'Cecilia Meireles', '1901', 'Feminino','escritoresbrasileiros_22')
+        let author5  = new Author(NewGuid(), 'Carlos Drummond de Andrade', '1902', 'Masculino','escritoresbrasileiros_72')
+        let author6  = new Author(NewGuid(), 'Machado de Assis', '1839', 'Masculino','escritoresbrasileiros_32')
+        let author7  = new Author(NewGuid(), 'Clarice Lispector', '1920', 'Feminino','escritoresbrasileiros_61')
+        let author8  = new Author(NewGuid(), 'João Cabral de Melo Neto', '1920', 'Masculino','joao_cabral_thumbnail_c')
+        let author9  = new Author(NewGuid(), 'Graciliano Ramos', '1892', 'Masculino','graciliano_ramos_123')
+        let author27 = new Author(NewGuid(), 'Mario Quintana', '1906', 'Masculino','mario_quintana_2_c')
+        let author10 = new Author(NewGuid(), 'Guimarães Rosa', '1908', 'Masculino','guimaraes_rosa_123')
+        let author11 = new Author(NewGuid(), 'Ruth Rocha', '1931', 'Feminino','ruth_rocha')
+        let author12 = new Author(NewGuid(), 'Luis Fernando Veríssimo', '1936', 'Masculino','verissimo')
+        let author28 = new Author(NewGuid(), 'Ana Maria Machado', '1941', 'Feminino','escritoresbrasileiros_3')
+        let author13 = new Author(NewGuid(), 'Chico Buarque de Holanda', '1944', 'Masculino','escritoresbrasileiros_4')
+        let author14 = new Author(NewGuid(), 'Adelia Prado', '1935', 'Feminino','escritoresbrasileiros_5')
+        let author29 = new Author(NewGuid(), 'Eva Furnari', '1948', 'Feminino','escritoresbrasileiros_6')
+        let author15 = new Author(NewGuid(), 'Martha Medeiros', '1961', 'Feminino','escritoresbrasileiros_7')
+        let author16 = new Author(NewGuid(), 'Conceição Evaristo', '1946', 'Feminino','evaristo')
+        let author17 = new Author(NewGuid(), 'André Dahmer', '1974', 'Masculino','escritoresbrasileiros_9')
+        let author18 = new Author(NewGuid(), 'Marcelino Freire ', '1967', 'Masculino','escritoresbrasileiros_10')
+        let author19 = new Author(NewGuid(), 'Marçal Aquino', '1958', 'Masculino','escritoresbrasileiros_11')
+        let author20 = new Author(NewGuid(), 'Antônio Prata ', '1977', 'Masculino','escritoresbrasileiros_12')
+        let author21 = new Author(NewGuid(), 'Ana Maria Gonçalves', '1970', 'Feminino','escritoresbrasileiros_13')
+        let author22 = new Author(NewGuid(), 'Veronica Stigger', '1973', 'Feminino','escritoresbrasileiros_14')
+        let author23 = new Author(NewGuid(), 'Luisa Geisler', '1991', 'Feminino','escritoresbrasileiros_15')
+        let author24 = new Author(NewGuid(), 'Raphael Montes', '1990', 'Masculino','escritoresbrasileiros_16')
+        let author25 = new Author(NewGuid(), 'Daniel Galera', '1979', 'Masculino','escritoresbrasileiros_17')
+        let author26 = new Author(NewGuid(), 'Ricardo Terto', '1986', 'Masculino','escritoresbrasileiros_18')
+
+        const repository = new AuthorRepository()
+        repository.Save(author2)
+        repository.Save(author3)
+        repository.Save(author4)
+        repository.Save(author5)
+        repository.Save(author6)
+        repository.Save(author7)
+        repository.Save(author8)
+        repository.Save(author9)
+        repository.Save(author27)
+        repository.Save(author10)
+        repository.Save(author11)
+        repository.Save(author12)
+        repository.Save(author28)
+        repository.Save(author13)
+        repository.Save(author14)
+        repository.Save(author29)
+        repository.Save(author15)
+        repository.Save(author16)
+        repository.Save(author17)
+        repository.Save(author18)
+        repository.Save(author19)
+        repository.Save(author20)
+        repository.Save(author21)
+        repository.Save(author22)
+        repository.Save(author23)
+        repository.Save(author24)
+        repository.Save(author25)
+        repository.Save(author26)
+
+        //console.log(author1)
+
+    </script>
+
+
+
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
 </html>

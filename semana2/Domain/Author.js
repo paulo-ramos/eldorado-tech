@@ -1,24 +1,29 @@
 class Author {
-    contructor (id, name, age, genre) {
-        this._Id = id
+    constructor (id, name, yearOfBirth, genre, image) {
+        this._id = id
         this._name = name
-        this._age = age
+        this._yearOfBirth = yearOfBirth
         this._genre = genre
+        this._image = image
     }
 
     getId(){
-        return this._Id
+        return this._id
     }
 
     getName(){
         return this._name
     }
 
-    getAge(){
-        return this._age
+    getYearOfBirth(){
+        return this._yearOfBirth
     }
 
     getGenre(){
         return this._genre
+    }
+
+    getImage(){
+        return `<figure><img src="../../www/images/${this._image}.jpg" alt="Escritores brasileiros:${this._name}" width="60" height="50" ></figure>`
     }
 }

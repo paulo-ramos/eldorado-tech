@@ -1,5 +1,5 @@
 class Book {
-    contructor (title, sumary, pages, year, publishingCompany, author) {
+    constructor (title, sumary, pages, year, publishingCompany, author) {
         this._Id = (id !== "" && id !== null && id !== undefined) ? id : NewGuid()
         this._title = title
         this._sumary = sumary

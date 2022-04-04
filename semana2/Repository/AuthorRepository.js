@@ -7,12 +7,12 @@ class AuthorRepository{
             localStorage.setItem(this._keyAuthor, JSON.stringify(this._authors))
         }
     }
-
+    
     _formatAuthors(){
-        let authorJson = localStorage.getItem(this._keyAuthor)
-        let classlessAuthor = JSON.parse(authorJson)
-        this._authors = classlessAuthor.map(
-            author => new Author(author._id, author._name, author._age, author._genre)
+        let authorsJson = localStorage.getItem(this._keyAuthor)
+        let Authors = JSON.parse(authorsJson)
+        this._authors = Authors.map(
+            author => new Author(author._id, author._name, author._yearOfBirth, author._genre, author._image)
         )
     }
 
@@ -25,8 +25,9 @@ class AuthorRepository{
     GetById(id){
         this._formatAuthors()
         
-        this._authors.filter(author => author.getId() === id)
+        this._authors.filter(author => author.getid() === id)
     }
+    
 
     GetByName(name){
         this._formatAuthors()
@@ -34,10 +35,10 @@ class AuthorRepository{
         this._authors.filter(author => author.getName() === name)
     }
 
-    GetByAge(age){
+    GetByAge(yearOfBirth){
         this._formatAuthors()
         
-        this._authors.filter(author => author.getAge() === age)
+        this._authors.filter(author => author.getYearOfBirth() === yearOfBirth)
     }
 
     GetByGenre(genre){
@@ -77,9 +78,38 @@ class AuthorRepository{
     }
 
 
-    _SaveStorageAuthors(author){
-        localStorage.setItem(this._keyAuthor, author)
+    _SaveStorageAuthors(authors){
+        localStorage.setItem(this._keyAuthor, JSON.stringify(authors))
     }
+
+
+    _TableAuthor(){
+		$("#tableAuthor").html("");
+		$("#tableAuthor").html(
+			"<thead>"+
+			"	<tr>"+			
+			"	    <th>Id</th>"+
+			"	    <th>Nome</th>"+
+			"	    <th>Idade</th>"+
+			"	    <th>Genero</th>"+
+            "       <th></th>"+
+			"	</tr>"+
+			"</thead>"+
+			"<tbody>"+
+			"</tbody>"
+			);
+
+		 for(var i in tbClientes){
+			var cli = JSON.parse(tbClientes[i]);
+		  	$("#tableAuthor tbody").append("<tr>"+
+									 	 "	<td><img src='edit.png' alt='"+i+"' class='btnEditar'/><img src='delete.png' alt='"+i+"' class='btnExcluir'/></td>" + 
+										 "	<td>"+cli.Codigo+"</td>" + 
+										 "	<td>"+cli.Nome+"</td>" + 
+										 "	<td>"+cli.Telefone+"</td>" + 
+										 "	<td>"+cli.Email+"</td>" + 
+		  								 "</tr>");
+		 }
+	}
 
 
 
